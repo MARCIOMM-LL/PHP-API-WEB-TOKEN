@@ -6,44 +6,7 @@ Crud Project
 
 ### 1.1 - Executar esta função no banco para formatar os dados de retorno pela api via postman por exemplo.
 
-CREATE DATABASE db_doadores;
-
-CREATE TYPE INTERVALO_DOACAO AS ENUM
-(
-    'unico',
-    'bimestral',
-    'semestral',
-    'anual'
-);
-
-CREATE TYPE FORMA_PAGAMENTO AS ENUM
-(
-'debito',
-'credito'
-);
-
-CREATE TABLE tb_doadores
-(
-    doador_id SERIAL PRIMARY KEY,
-    nome VARCHAR(255),
-    email VARCHAR(255),
-    cpf CHAR(11),
-    telefone VARCHAR(55),
-    data_nascimento DATE,
-    data_cadastro DATE,
-    intervalo_doacao INTERVALO_DOACAO,
-    forma_pagamento FORMA_PAGAMENTO,
-    preco_doacao NUMERIC(19,2),
-    cep VARCHAR(55),
-    endereco VARCHAR(255),
-    numero INTEGER,
-    bairro VARCHAR(55),
-    cidade VARCHAR(55),
-    uf VARCHAR(55)
- );
-
- SELECT * FROM tb_doadores;	
-
+```sql
 DELIMITER //
 
 CREATE FUNCTION mask (unformatted_value BIGINT, format_string CHAR(32))
@@ -135,7 +98,9 @@ select  mask(cep, '#####-###') AS cep from clientes;
 SELECT  DATE_FORMAT(data_nascimento,'%d/%m/%Y') AS data_nascimento
 FROM clientes;
               
-SELECT * FROM clientes;	
+SELECT * FROM clientes;
+
+```
 
 ### 2° - Executar o comando **composer install** para gerenciar o bandle "firebase/php-jwt": "^6.10"
 
