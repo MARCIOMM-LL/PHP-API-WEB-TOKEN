@@ -52,10 +52,7 @@ CREATE TABLE usuarios (
 ) ENGINE=InnoDB;
 
 INSERT INTO usuario (nome, senha)
-VALUES ('Lucas', 'hdgf');
-
-INSERT INTO usuario (nome, senha)
-VALUES ('Luca', 'hdgf');
+VALUES ('Lucas', 'ddA1@nome');
 
 SELECT * FROM usuario;  
 
