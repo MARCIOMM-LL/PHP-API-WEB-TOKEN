@@ -1,5 +1,6 @@
 # PROJECT-PHP-API-WEB-TOKEN
-Crud Project
+
+Projeto api crud de acordo com os requisitos solicitados como por exemplo autenticação jwt, critérios de validação e formatação de dados etc. 
 
 
 ### 1° - Execute os seguintes comandos DUMP para criar o banco de dados no **MysqlSql** sgbd
