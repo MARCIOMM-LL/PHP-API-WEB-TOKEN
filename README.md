@@ -59,30 +59,34 @@ SELECT * FROM usuario;
 
 ### 1.2 - Criar a tabela clientes e hidrata-la
 
-CREATE TABLE clientes (
-  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  nome varchar(60) NULL,
-  genero varchar(60) NULL,
-  data_nascimento DATE NULL,
-  cep VARCHAR(45) NULL,
-  endereco VARCHAR(45) NULL,
-  numero VARCHAR(45) NULL,
-  bairro VARCHAR(45) NULL,
-  cidade VARCHAR(45) NULL,
-  uf VARCHAR(45) NULL,
-  email VARCHAR(45) NULL,
-  telefone varchar(100) NOT NULL,
-  cpf_cnpj VARCHAR(45) NULL,
-  data_cadastro DATE NULL,
-  status VARCHAR(45) NULL
-) ENGINE=InnoDB;
+  CREATE TABLE clientes (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nome varchar(60) NULL,
+    genero varchar(60) NULL,
+    data_nascimento DATE NULL,
+    cep VARCHAR(45) NULL,
+    endereco VARCHAR(45) NULL,
+    numero VARCHAR(45) NULL,
+    bairro VARCHAR(45) NULL,
+    cidade VARCHAR(45) NULL,
+    uf VARCHAR(45) NULL,
+    email VARCHAR(45) NULL,
+    telefone varchar(100) NOT NULL,
+    cpf_cnpj VARCHAR(45) NULL,
+    data_cadastro DATE NULL,
+    status VARCHAR(45) NULL
+  ) ENGINE=InnoDB;
 
-INSERT INTO clientes (nome, genero, data_nascimento, cep, endereco, numero, bairro, cidade, uf, email, telefone, cpf_cnpj, data_cadastro, status)
-VALUES ('Lucas', 'Masculino', '1988-09-22', '05642000', 'Av José Galante', '2', 'Vila Andrade', 'São Paulo', 'SP', 'hd@gmail.com', '11958547808', 23609522852, '2024-04-30', 'ativo');
-INSERT INTO clientes (nome, genero, data_nascimento, cep, endereco, numero, bairro, cidade, uf, email, telefone, cpf_cnpj, data_cadastro, status)
-VALUES ('Roberto', 'Masculino', '1988-09-22', '05642000', 'Av José Galante', '3', 'Vila Andrade', 'São Paulo', 'SP', 'hd@gmail.com', '11958547808', 23609522852, '2024-04-30', 'inativo');
-INSERT INTO clientes (nome, genero, data_nascimento, cep, endereco, numero, bairro, cidade, uf, email, telefone, cpf_cnpj, data_cadastro, status)
-VALUES ('Márcio', 'Masculino', '1988-09-22', '05642000', 'Av José Galante', '4', 'Vila Andrade', 'São Paulo', 'SP', 'hd@gmail.com', '11958547808', 23609522852, '2024-04-30', 'pendente');
+  INSERT INTO clientes (nome, genero, data_nascimento, cep, endereco, numero, bairro, cidade, uf, email, telefone, cpf_cnpj, data_cadastro, status)
+  VALUES ('Lucas', 'Masculino', '1988-09-22', '05642000', 'Av José Galante', '2', 'Vila Andrade', 'São Paulo', 'SP', 'hd@gmail.com', '11953547808', 23609522832,   '2024-04-30', 'ativo');
+
+  INSERT INTO clientes (nome, genero, data_nascimento, cep, endereco, numero, bairro, cidade, uf, email, telefone, cpf_cnpj, data_cadastro, status)
+  VALUES ('Roberto', 'Masculino', '1988-09-22', '05642000', 'Av José Galante', '3', 'Vila Andrade', 'São Paulo', 'SP', 'hd@gmail.com', '11958547803',         
+  33609522852, '2024-04-30', 'inativo');
+  
+  INSERT INTO clientes (nome, genero, data_nascimento, cep, endereco, numero, bairro, cidade, uf, email, telefone, cpf_cnpj, data_cadastro, status)
+  VALUES ('Márcio', 'Masculino', '1988-09-22', '05642000', 'Av José Galante', '4', 'Vila Andrade', 'São Paulo', 'SP', 'hd@gmail.com', '11958547848',     
+  23609522855, '2024-04-30', 'pendente');
 
 ### Testando as máscaras
 select  mask(telefone, '(##) #####-####') AS telefone from clientes;
