@@ -26,6 +26,6 @@ if ($requestMethod === "PUT") {
         'status' => 405,
         'message' => $requestMethod . ' Método não permitido!',
     ];
-    header("HTTP/1.0 405 Método não permitido!");
+    header("HTTP/2 405 Método não permitido!");
     return json_encode($data);
 }
